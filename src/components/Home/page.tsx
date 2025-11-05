@@ -29,7 +29,7 @@ const HomeComponent = () => {
           <h2 className="display-4 text-white fw-bold mb-3 text-shadow-lg">
             TechFutura Solutions
           </h2>
-          <h3 className="fw-bold display-6  text-white mb-3">Our Prtfolio</h3>
+          <h3 className="fw-bold display-6  text-white mb-3">Our Portfolio</h3>
         </div>
       </section>
       <div className="px-3">
