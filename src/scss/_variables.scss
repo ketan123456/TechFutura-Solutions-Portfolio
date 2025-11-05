@@ -1,0 +1,225 @@
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1230px,
+  xxl: 1440px) !default;
+
+$container-max-widths: (
+  sm: 100%,
+  md: 100%,
+  lg: 100%,
+  xl: 1164px,
+  xxl: 100%
+);
+
+:root {
+  --bs-modal-sm: 23.194vw;
+  --bs-modal-md: 36.458vw;
+  --bs-modal-lg: 49.653vw;
+  --bs-modal-xl: 76.597vw;
+
+  --bs-offcanvas-width: 25.903vw;
+  --spacer: 0.278vw;
+  --bs-font: "DM Sans", sans-serif;
+  --bs-font-heading: "Drama";
+  --bs-font-italic: "DM Sans", sans-serif;
+
+  --bs-body-ff: var(--bs-font);
+  --bs-body-fs: 0.972vw;
+  --bs-body-lh: 100%;
+  --bs-body-fw: 500;
+
+  --bs-small-font-size: 0.833vw;
+  --bs-small-line-height: 100%;
+
+  // --bs-font-size-1: 12px;
+  // --bs-line-height-1: 100%;
+
+  --bs-font-size-h1: 56px;  
+  --bs-line-height-h1: 100%;
+  --bs-font-weight-h1: 700;
+  --bs-font-size-h2: 48px;
+  --bs-line-height-h2: 100%;
+  --bs-font-weight-h2: 700;
+  --bs-font-size-h3: 42px;
+  --bs-line-height-h3: 100%;
+  --bs-font-weight-h3: 400;
+  --bs-font-size-h4: 36px;
+  --bs-line-height-h4: 100%;
+  --bs-font-weight-h4: 800;
+  --bs-font-size-h5: 32px;
+  --bs-line-height-h5: 100%;
+  --bs-font-weight-h5: 400;
+  --bs-font-size-h6: 0.972vw;
+  --bs-line-height-h6: 28px   ;
+  --bs-font-weight-h6: 400;
+
+  --bs-radius-xl: 2.083vw;
+  --bs-radius-lg: 1.042vw;
+  --bs-radius-md: 0.694vw;
+  --bs-radius-sm: 0.556vw;
+  --bs-radius: 0.347vw;
+
+  --bs-font-thin: 100;
+  --bs-font-extra-light: 200;
+  --bs-font-light: 300;
+  --bs-font-regular: 400;
+  --bs-font-medium: 500;
+  --bs-font-semi-bold: 600;
+  --bs-font-bold: 700;
+  --bs-font-extra-bold: 800;
+  --bs-font-black: 900;
+
+  --transition: all .4s ease-in-out 0s;
+
+  --bs-gutter: 24px;
+
+  --bs-radius-input: 1.042vw;
+
+  --bs-header: 104px;
+  --bs-table-bg: #FFFFFF;
+
+}
+
+@include responsive(xxl) {
+  :root {
+    --bs-modal-sm: 334px;
+    --bs-modal-md: 525px;
+    --bs-modal-lg: 715px;
+    --bs-modal-xl: 1103px;
+    --bs-offcanvas-width: 373px;
+    --spacer: 4px;
+    --bs-body-fs: 14px;
+    --bs-small-font-size: 12px;
+    --bs-font-size-h1: 52px;
+    --bs-line-height-h1: 100%;
+    --bs-font-size-h2: 44px;
+    --bs-line-height-h2: 100%;
+    --bs-font-size-h3: 38px;
+    --bs-line-height-h3: 100%;
+    --bs-font-size-h4: 32px;
+    --bs-line-height-h4: 100%;
+    --bs-font-size-h5: 28px;
+    --bs-line-height-h5: 100%;
+    --bs-font-size-h6: 24px;
+    --bs-line-height-h6: 100%;
+    --bs-radius-xl: 30px;
+    --bs-radius-lg: 15px;
+    --bs-radius-md: 10px;
+    --bs-radius-sm: 8px;
+    --bs-radius: 5px;
+  }
+}
+
+
+$primary: #063FDD !default;
+$secondary: #0F2D53 !default;
+$success: #2EB875 !default;
+$danger: #FE242E !default;
+$warning: #FFFB00 !default;
+$info: #F4F4F4 !default;
+$light: #E4EFFF !default;
+$dark: #0C0C0C !default;
+$white: #FFFFFF !default;
+$black: #000000 !default;
+$body-bg: #F9F9F9 !default;
+$body-color: #718096 !default;
+$border-color: #E6E6E6 !default;
+$purple: #9D4EDD !default;
+$body-bg-rgb: #F9F9F9 !default;
+$table-bg : #FFFFFF !default;
+$primary-text-emphasis: #FFE3CC !default;
+$light-text-emphasis: #F4F7FE !default;
+$success-text-emphasis: #00A807 !default;
+$danger-text-emphasis: #FAC1D9 !default;
+
+$primary-border-subtle: #FD7900 !default;
+$success-border-subtle: #2EB875 !default;
+
+$primary-bg-subtle: #F2F5FC !default;
+$success-bg-subtle: #2EB875 !default;
+
+$gray-100: #555555 !default;
+$gray-200: #242424 !default;
+$gray-300: #F7F7F7 !default;
+$gray-400: #A8A8A8 !default;
+$gray-600: #ECECEC !default;
+
+
+$spacers: (
+  0: 0,
+  1: calc(var(--spacer) * 1),
+  2: calc(var(--spacer) * 2),
+  3: calc(var(--spacer) * 3),
+  4: calc(var(--spacer) * 4),
+  5: calc(var(--spacer) * 5),
+  6: calc(var(--spacer) * 6),
+  7: calc(var(--spacer) * 7),
+  8: calc(var(--spacer) * 8),
+  9: calc(var(--spacer) * 9),
+  10: calc(var(--spacer) * 10),
+  11: calc(var(--spacer) * 11),
+  12: calc(var(--spacer) * 12),
+  13: calc(var(--spacer) * 13),
+  14: calc(var(--spacer) * 14),
+  15: calc(var(--spacer) * 15),
+  16: calc(var(--spacer) * 16),
+  17: calc(var(--spacer) * 17),
+  18: calc(var(--spacer) * 18),
+  19: calc(var(--spacer) * 19),
+  20: calc(var(--spacer) * 20),
+  21: calc(var(--spacer) * 21),
+  22: calc(var(--spacer) * 22),
+  24: calc(var(--spacer) * 24),
+  25: calc(var(--spacer) * 25),
+  28: calc(var(--spacer) * 28),
+  30: calc(var(--spacer) * 30),
+  31: calc(var(--spacer) * 31),
+  35: calc(var(--spacer) * 35),
+  36: calc(var(--spacer) * 36),
+  40: calc(var(--spacer) * 40),
+  46: calc(var(--spacer) * 46),
+);
+
+$utilities: (
+  "opacity": (property: opacity,
+    values: (0: 0,
+      10: .1,
+      25: .25,
+      50: .5,
+      75: .75,
+      100: 1,
+    )),
+);
+
+$card-height: 100% !default;
+$card-box-shadow: none !default;
+
+$input-border-width: 1px !default;
+$input-border-color: var(--bs-border-color) !default;
+$input-border-radius: var(--bs-radius-lg) !default;
+$input-btn-focus-box-shadow: none !default;
+$input-placeholder-color: var(--bs-gray-100) !default;
+$input-color: var(--bs-black) !default;
+$nav-link-color: var(--bs-gray-400) !default;
+
+
+
+$modal-sm: 23.194vw !default;
+$modal-md: 36.458vw !default;
+$modal-lg: 49.653vw !default;
+$modal-xl: 76.597vw !default;
+
+$modal-inner-padding: 0px !default;
+$modal-content-border-radius: calc(var(--spacer) * 5) !default;
+// check box
+$form-check-input-border: var(--bs-black) !default;
+$form-check-input-checked-border-color: var(--bs-primary) !default;
+// table
+$table-active-bg: var(--bs-light-text-emphasis) !default;
+$table-hover-bg: var(--bs-light-text-emphasis) !default;
+// input Group
+$input-group-addon-bg: var(--bs-primary) !default;
+$input-group-addon-color: var(--bs-white) !default;

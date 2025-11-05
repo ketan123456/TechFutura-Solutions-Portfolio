@@ -1,0 +1,65 @@
+@import "mixins";
+@import "variables";
+
+@import "bootstrap/bootstrap";
+
+@import "component/base";
+@import "component/root";
+@import "component/auth";
+@import "component/_portfolio-home";
+
+
+[data-aos] {
+    opacity: 0;
+    transition-property: transform, opacity !important;
+}
+
+[data-aos].aos-animate {
+    opacity: 1;
+}
+
+.image-wrapper {
+    overflow: hidden;
+}
+
+.image-wrapper:hover img {
+    transform: scale(1.05);
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.image-wrapper:hover .overlay {
+    opacity: 1;
+}
+
+.fullscreen-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1050;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+.fullwidth-image{
+    margin: 0px;
+        width: 100%;
+        max-width: 100%;
+        position: fixed;
+        top: 0;
+        z-index: 999;
+}

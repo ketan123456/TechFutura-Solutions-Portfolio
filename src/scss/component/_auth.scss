@@ -1,0 +1,61 @@
+body {
+    &.auth-layout {
+        display: flex;
+        place-items: center;
+        --bs-auth-layout-bg: radial-gradient(circle,
+                #ceeefd 0%,
+                #e7e8fb 30%,
+                #ceeefd 100%);
+        background: var(--bs-auth-layout-bg);
+
+        .log-col {
+            padding: 1.667vw;
+
+            .pen-title {
+                max-width: 11.944vw;
+                width: 100%;
+                margin: 0 auto;
+
+                img {
+                    width: 100%;
+                }
+
+                @include responsive(xxl) {
+                    max-width: 172px;
+                }
+            }
+
+            @include responsive(xxl) {
+                padding: 24px;
+            }
+
+            @include responsive(lg) {
+
+                width: fit-content !important;
+                height: fit-content;
+                @include border-radius(var(--bs-radius-xl));
+                margin: 20px;
+                z-index: 2;
+
+            }
+
+            @media (max-width:400px) {
+                width: calc(100% - 40px) !important;
+            }
+        }   
+
+        // .auth-img {
+        //     aspect-ratio: 9/15;
+
+        //     @include responsive(lg) {
+        //         position: absolute;
+        //         height: 100%;
+        //         height: 100%;
+
+
+        //         z-index: 1;
+        //     }
+        // }
+    }
+
+}
