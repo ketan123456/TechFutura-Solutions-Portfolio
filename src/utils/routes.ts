@@ -8,4 +8,5 @@ export const ROUTES = {
   CLYMB: '/clymb',
   REVJUMP: '/revjump',
   GOTU: '/gotu',
+  MPOREO:'/mporeo'
 };
