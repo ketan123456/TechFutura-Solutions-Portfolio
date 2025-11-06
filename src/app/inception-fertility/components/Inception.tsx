@@ -6,8 +6,9 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-const InceptionFertility = () => {
+const InceptionFertility: React.FC = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
+
   // ✅ Proper AOS initialization fix for Next.js
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -22,7 +23,6 @@ const InceptionFertility = () => {
       };
       init();
 
-      // Use RAF to handle delayed hydration after refresh
       const timer = requestAnimationFrame(() => {
         AOS.refreshHard();
       });
@@ -38,8 +38,10 @@ const InceptionFertility = () => {
     "buttercms_admin.png",
     "cookies.png",
   ];
+
   return (
-    <div className="bg-light text-dark">
+    <div className="jsx-inceptionfertility bg-light text-dark">
+      {/* ===== Hero Section ===== */}
       <section
         className="text-white text-center py-5 position-relative overflow-hidden"
         style={{
@@ -53,7 +55,7 @@ const InceptionFertility = () => {
           }}
         />
         <div className="container position-relative py-5" data-aos="fade-up">
-          <h1 className=" fw-bold mb-3 text-shadow-lg text-white">
+          <h1 className="fw-bold mb-3 text-shadow-lg text-white h2">
             Inception Fertility
           </h1>
           <p className="lead mb-4 opacity-75 fs-5">
@@ -64,245 +66,212 @@ const InceptionFertility = () => {
           </button>
         </div>
       </section>
+
+      {/* ===== Project Overview ===== */}
       <section className="container py-5">
-        <div className="row g-4 align-items-stretch">
-          <div className="col-md-6" data-aos="fade-right">
-            <div className="card border-0 shadow-lg rounded-4 h-100 p-4 bg-white bg-opacity-75 backdrop-blur">
-              <h4 className="fw-bold text-primary mb-3 ">
-                Project Overview
-              </h4>
-              <ul className="list-unstyled small">
-                <li className="mb-2">
-                  <strong>Headquarters:</strong> United States
-                </li>
-                <li className="mb-2">
-                  <strong>Industry:</strong> Healthcare / Fertility Tech
-                </li>
-                <li className="mb-2">
-                  <strong>Services:</strong> Web Development, CMS Integration,
-                  SEO Optimization, API Integration
-                </li>
-                <li>
-                  <strong>User Personas:</strong>
-                  <div className="d-flex flex-wrap gap-2 mt-2">
-                    {[
-                      "Patients",
-                      "Fertility Clinics",
-                      "Medical Professionals",
-                      "Administrators",
-                    ].map((role, i) => (
-                      <span
-                        key={i}
-                        className="badge rounded-pill px-3 py-2 shadow-sm"
-                        style={{
-                          background:
-                            "linear-gradient(135deg, #6a11cb 0%, #2575fc 100%)",
-                        }}>
-                        {role}
-                      </span>
-                    ))}
-                  </div>
-                </li>
-              </ul>
+        <div className="vstack gap-4">
+          <div className="row g-4 align-items-stretch">
+            {/* Overview */}
+            <div className="col-md-6" data-aos="fade-right">
+              <div className="card border-0 shadow-lg rounded-4 h-100 p-4 bg-white bg-opacity-75 backdrop-blur">
+                <h4 className="fw-bold text-primary mb-3 ">Project Overview</h4>
+                <ul className="list-unstyled small">
+                  <li className="mb-2">
+                    <strong>Headquarters:</strong> United States
+                  </li>
+                  <li className="mb-2">
+                    <strong>Industry:</strong> Healthcare / Fertility Tech
+                  </li>
+                  <li className="mb-2">
+                    <strong>Services:</strong> Web Development, CMS Integration,
+                    SEO Optimization, API Integration
+                  </li>
+                  <li>
+                    <strong>User Personas:</strong>
+                    <div className="d-flex flex-wrap gap-2 mt-2">
+                      {[
+                        "Patients",
+                        "Fertility Clinics",
+                        "Medical Professionals",
+                        "Administrators",
+                      ].map((role, i) => (
+                        <span
+                          key={i}
+                          className="badge rounded-pill px-3 py-2 shadow-sm"
+                          style={{
+                            background:
+                              "linear-gradient(135deg, #6a11cb 0%, #2575fc 100%)",
+                          }}>
+                          {role}
+                        </span>
+                      ))}
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Client */}
+            <div className="col-md-6" data-aos="fade-left">
+              <div className="card border-0 shadow-lg rounded-4 h-100 p-4 bg-white">
+                <h4 className="fw-bold text-primary mb-3 ">The Client</h4>
+                <p className="text-muted">
+                  Inception Fertility is a tech-enabled company improving the
+                  patient experience through an integrated ecosystem of
+                  fertility brands. It provides science-backed fertility
+                  solutions for individuals and couples, blending technology
+                  with compassion to guide patients through every step of their
+                  fertility journey.
+                </p>
+              </div>
             </div>
           </div>
-          <div className="col-md-6" data-aos="fade-left">
-            <div className="card border-0 shadow-lg rounded-4 h-100 p-4 bg-white">
-              <h4 className="fw-bold text-primary mb-3 ">
-                The Client
-              </h4>
-              <p className="text-muted">
-                Inception Fertility is a tech-enabled company improving patient
-                experience through an integrated ecosystem of fertility brands.
-                It provides expert-formulated fertility support for both women
-                and men, combining flexibility and effectiveness to suit diverse
-                lifestyles. The company focuses on delivering science-backed
-                solutions that guide individuals and couples through every stage
-                of their fertility journey with compassion and care.
-              </p>
+
+          {/* Technologies & About */}
+          <div className="row g-4 align-items-stretch">
+            {/* Technologies Used */}
+            <div className="col-md-6" data-aos="fade-right">
+              <div className="card border-0 shadow-lg rounded-4 h-100 p-4 bg-white bg-opacity-75 backdrop-blur">
+                <h4 className="fw-bold text-primary mb-3 ">
+                  Technologies Used
+                </h4>
+                <ul className="list-unstyled small">
+                  <li className="mb-2">
+                    <span>UI Framework: </span>
+                    <span>Nuxt.js</span>
+                  </li>
+                  <li className="mb-2">
+                    <span>Frontend: </span>
+                    <span>HTML, CSS, SCSS, JavaScript</span>
+                  </li>
+                  <li className="mb-2">
+                    <span>Design Tool: </span>
+                    <span>Figma</span>
+                  </li>
+                  <li className="mb-2">
+                    <span>Third-Party Integration: </span>
+                    <span>ButterCMS</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            {/* About The Project */}
+            <div className="col-md-6" data-aos="fade-left">
+              <div className="card border-0 shadow-lg rounded-4 h-100 p-4 bg-white">
+                <h4 className="fw-bold text-primary mb-3 ">
+                  About The Project
+                </h4>
+                <p className="text-muted">
+                  The Inception Fertility platform was designed to provide an
+                  informative, seamless digital experience for users seeking
+                  fertility support. It focuses on SEO performance, API-driven
+                  content delivery, and clear presentation of scientific data
+                  while maintaining compliance with healthcare standards.
+                </p>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
-      {/* =======Technology Used and About the project======== */}
-      <section className="container py-5">
-        <div className="row g-4 align-items-stretch">
-          <div className="col-md-6" data-aos="fade-right">
-            <div className="card border-0 shadow-lg rounded-4 h-100 p-4 bg-white bg-opacity-75 backdrop-blur">
-              <h4 className="fw-bold text-primary mb-3 ">
-                Technologies Used
-              </h4>
-              <ul className="list-unstyled small">
-                <li className="mb-2">
-                  <span>UI Framework</span>
-                  <span>Nuxt.js</span>
-                </li>
-                <li className="mb-2">
-                  <span>Frontend</span>
-                  <span>HTML, CSS, SCSS, JavaScript</span>
-                </li>
-                <li className="mb-2">
-                  <span>Design Tool</span>
-                  <span>Figma</span>
-                </li>
-                <li className="mb-2">
-                  <span>Third-Party Integration</span>
-                  <span>ButterCMS</span>
-                </li>
-              </ul>
+
+          {/* Challenges & Solutions */}
+          <div className="row g-4 align-items-stretch">
+            {/* Challenges */}
+            <div className="col-md-6" data-aos="fade-right">
+              <div className="card border-0 shadow-lg rounded-4 h-100 p-4 bg-white bg-opacity-75 backdrop-blur">
+                <h4 className="fw-bold text-primary mb-3 ">Challenges</h4>
+                <ul className="list-unstyled small">
+                  <li>Integrating ButterCMS with SEO functionality.</li>
+                  <li>Handling dynamic iframes and backend data rendering.</li>
+                  <li>Displaying complex medical data accurately.</li>
+                  <li>Seamless connectivity with partner clinic systems.</li>
+                </ul>
+              </div>
             </div>
-          </div>
-          <div className="col-md-6" data-aos="fade-left">
-            <div className="card border-0 shadow-lg rounded-4 h-100 p-4 bg-white">
-              <h4 className="fw-bold text-primary mb-3 ">
-                About The Project
-              </h4>
-              <p className="text-muted">
-                The Inception Fertility platform was built to deliver an
-                engaging and informative digital experience for users seeking
-                fertility-related support and guidance. With a focus on
-                performance, SEO, and medical data accuracy, the website
-                provides scientific information in a user-friendly and
-                transparent manner while ensuring seamless integration with
-                partner clinics and APIs.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-      {/*======== Challenges & Solutions ==========*/}
-      <section className="container py-5">
-        <div className="row g-4 align-items-stretch">
-          <div className="col-md-6" data-aos="fade-right">
-            <div className="card border-0 shadow-lg rounded-4 h-100 p-4 bg-white bg-opacity-75 backdrop-blur">
-              <h4 className="fw-bold text-primary mb-3 ">
-                Challenges
-              </h4>
-              <ul className="list-unstyled small">
-                <li className="mb-2">
-                  Implementing ButterCMS while managing backend operations and
-                  SEO functionalities.
-                </li>
-                <li className="mb-2">
-                  Handling dynamic iframes and data fetched from the backend.
-                </li>
-                <li className="mb-2">
-                  Presenting complex medical data clearly and accurately for
-                  users.
-                </li>
-                <li className="mb-2">
-                  Connecting seamlessly with partner platforms and fertility
-                  clinic systems.
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className="col-md-6" data-aos="fade-left">
-            <div className="card border-0 shadow-lg rounded-4 h-100 p-4 bg-white">
-              <h4 className="fw-bold text-primary mb-3 ">
-                Solutions
-              </h4>
-              <ul className="list-unstyled small">
-                <li className="mb-2">
-                  Integrated ButterCMS efficiently to manage dynamic content,
-                  enabling flexible page updates without developer dependency.
-                </li>
-                <li className="mb-2">
-                  Built a secure backend structure that handled iframe
-                  management and ensured smooth rendering of embedded data.
-                </li>
-                <li className="mb-2">
-                  Created a structured scientific section with categorized
-                  medical content and an intelligent search function for easy
-                  navigation.
-                </li>
-                <li className="mb-2">
-                  Implemented secure APIs and encrypted data exchange protocols
-                  for safe integration with third-party platforms and partner
-                  systems.
-                </li>
-              </ul>
+
+            {/* Solutions */}
+            <div className="col-md-6" data-aos="fade-left">
+              <div className="card border-0 shadow-lg rounded-4 h-100 p-4 bg-white">
+                <h4 className="fw-bold text-primary mb-3 ">Solutions</h4>
+                <ul className="list-unstyled small">
+                  <li>
+                    Integrated ButterCMS to enable dynamic content management
+                    and faster updates.
+                  </li>
+                  <li>
+                    Created secure backend handling for iframe and embedded
+                    data.
+                  </li>
+                  <li>
+                    Structured scientific sections for accurate medical content.
+                  </li>
+                  <li>
+                    Implemented secure API integrations for real-time
+                    data-sharing with partner clinics.
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/*======== Main Features ======*/}
+      {/* ===== Main Features ===== */}
       <section
         className="py-5 position-relative"
         style={{ background: "#f4f7ff" }}>
         <div className="container" data-aos="fade-up">
-          <h2 className="fw-bold h1 text-center text-primary mb-5 ">
+          <h2 className="fw-bold h1 text-center text-primary mb-5">
             Main Features
           </h2>
-          <ul className="list-unstyled small">
-            <li className="mb-4">
-              <h4 className="h2">Scientific Information Portal</h4>
-              <p className="text-muted">
-                Offers categorized medical and fertility data with a robust
-                search system allowing users to access accurate and relevant
-                information quickly.
-              </p>
-            </li>
-            <li className="mb-4">
-              <h4 className="h2">CMS-Driven Content Management</h4>
-              <p className="text-muted">
-                Integrated ButterCMS to empower marketing teams to update
-                content seamlessly while maintaining brand consistency and SEO
-                standards.
-              </p>
-            </li>
-            <li className="mb-4">
-              <h4 className="h2">Partner API Integration</h4>
-              <p className="text-muted">
-                Established secure API connections for fertility clinics and
-                partners, enabling real-time data sharing and process
-                synchronization.
-              </p>
-            </li>
-            <li className="mb-4">
-              <h4 className="h2">SEO Optimization</h4>
-              <p className="text-muted">
-                Implemented dynamic meta handling, schema structures, and
-                performance tuning to achieve higher visibility and better
-                organic reach.
-              </p>
-            </li>
-            <li className="mb-4">
-              <h4 className="h2">Responsive UI/UX</h4>
-              <p className="text-muted">
-                Built a highly responsive, visually appealing interface
-                optimized for desktop and mobile experiences, enhancing
-                accessibility for users across demographics.
-              </p>
-            </li>
-          </ul>
+          <div className="row g-4 align-items-stretch">
+            {[
+              {
+                title: "Scientific Information Portal",
+                text: "Offers categorized fertility and medical data with intelligent search for easy access to relevant information.",
+              },
+              {
+                title: "CMS-Driven Content Management",
+                text: "Empowers marketing teams to update pages via ButterCMS without developer involvement.",
+              },
+              {
+                title: "Partner API Integration",
+                text: "Securely connects with fertility clinics for real-time data synchronization.",
+              },
+              {
+                title: "SEO Optimization",
+                text: "Dynamic meta handling and schema structures for improved search visibility.",
+              },
+              {
+                title: "Responsive UI/UX",
+                text: "Delivers consistent, user-friendly experiences across all devices.",
+              },
+            ].map((feature, i) => (
+              <div className="col-md-6 col-lg-4" key={i}>
+                <div className="card border-0 shadow-lg rounded-4 h-100 p-4 bg-white bg-opacity-75 backdrop-blur">
+                  <h4 className="fw-bold text-primary mb-3">{feature.title}</h4>
+                  <p className="small mb-0">{feature.text}</p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
-      {/* ===== Highlights ===== */}
+      {/* ===== Project Highlights ===== */}
       <section
-        className="py-5 position-relative"
+        className="py-3 position-relative"
         style={{ background: "#f4f7ff" }}>
         <div className="container" data-aos="fade-up">
-          {/* <div>
-            <h1>Overview</h1>
-            <p>
-              The Inception Fertility platform presents fertility guidance and
-              products through an elegant, medically informative interface
-              designed for easy navigation and optimal SEO performance.{" "}
-            </p>
-          </div> */}
           <h2 className="fw-bold text-center text-primary mb-5">
-            Project Highlights 
+            Project Highlights
           </h2>
           <div className="row g-4">
             {[
               "Founded by a fertility patient, for fertility patients.",
-              "Focus on improving patient experience throughout the treatment journey.",
-              "Supports IVF treatments, donor programs, and gestational carrier partnerships.",
-              "Offers premium fertility brands under one ecosystem.",
-              "Driven by compassion, science, and customer-centric care.",
+              "Focus on patient experience across the treatment journey.",
+              "Supports IVF, donor, and gestational carrier programs.",
+              "Integrates multiple fertility brands under one platform.",
+              "Driven by compassion, science, and innovation.",
             ].map((item, i) => (
               <div className="col-md-6 col-lg-4" key={i}>
                 <div
@@ -329,7 +298,7 @@ const InceptionFertility = () => {
         </div>
       </section>
 
-      {/* ===== Product Visuals with Modal ===== */}
+      {/* ===== Product Visuals ===== */}
       <section className="bg-light py-5">
         <div className="container" data-aos="fade-up">
           <h2 className="fw-bold text-center text-primary mb-5">
@@ -344,7 +313,7 @@ const InceptionFertility = () => {
                   <div className="image-wrapper position-relative">
                     <Image
                       src={`/images/inceptionfertility/${img}`}
-                      alt="Clymb Visual"
+                      alt="Inception Fertility Visual"
                       width={500}
                       height={300}
                       className="img-fluid w-100"
@@ -392,17 +361,17 @@ const InceptionFertility = () => {
         </div>
       </section>
 
-      {/* ===== Final Result ===== */}
+      {/* ===== Result ===== */}
       <section className="py-5 text-center bg-white" data-aos="zoom-in">
         <div className="container">
           <h2 className="fw-bold text-success mb-3">The Result</h2>
-          <p className=" fs-5">
-            A sleek, scalable, and user-focused e-commerce platform uniting
-            diverse personas through one intuitive system.
+          <p className="text-muted fs-5">
+            A robust, scalable, and compassionate digital platform empowering
+            fertility journeys with innovation and care.
           </p>
           <blockquote className="blockquote fst-italic text-primary mt-4">
-            “They delivered excellence — clean design, flawless experience, and
-            outstanding performance.”
+            “They delivered excellence — seamless design, impactful performance,
+            and a meaningful user experience.”
           </blockquote>
         </div>
       </section>
