@@ -53,7 +53,7 @@ const InceptionFertility = () => {
           }}
         />
         <div className="container position-relative py-5" data-aos="fade-up">
-          <h1 className="display-4 fw-bold mb-3 text-shadow-lg text-white">
+          <h1 className=" fw-bold mb-3 text-shadow-lg text-white">
             Inception Fertility
           </h1>
           <p className="lead mb-4 opacity-75 fs-5">
@@ -68,7 +68,7 @@ const InceptionFertility = () => {
         <div className="row g-4 align-items-stretch">
           <div className="col-md-6" data-aos="fade-right">
             <div className="card border-0 shadow-lg rounded-4 h-100 p-4 bg-white bg-opacity-75 backdrop-blur">
-              <h4 className="fw-bold text-primary mb-3 display-6">
+              <h4 className="fw-bold text-primary mb-3 ">
                 Project Overview
               </h4>
               <ul className="list-unstyled small">
@@ -108,7 +108,7 @@ const InceptionFertility = () => {
           </div>
           <div className="col-md-6" data-aos="fade-left">
             <div className="card border-0 shadow-lg rounded-4 h-100 p-4 bg-white">
-              <h4 className="fw-bold text-primary mb-3 display-6">
+              <h4 className="fw-bold text-primary mb-3 ">
                 The Client
               </h4>
               <p className="text-muted">
@@ -129,7 +129,7 @@ const InceptionFertility = () => {
         <div className="row g-4 align-items-stretch">
           <div className="col-md-6" data-aos="fade-right">
             <div className="card border-0 shadow-lg rounded-4 h-100 p-4 bg-white bg-opacity-75 backdrop-blur">
-              <h4 className="fw-bold text-primary mb-3 display-6">
+              <h4 className="fw-bold text-primary mb-3 ">
                 Technologies Used
               </h4>
               <ul className="list-unstyled small">
@@ -154,7 +154,7 @@ const InceptionFertility = () => {
           </div>
           <div className="col-md-6" data-aos="fade-left">
             <div className="card border-0 shadow-lg rounded-4 h-100 p-4 bg-white">
-              <h4 className="fw-bold text-primary mb-3 display-6">
+              <h4 className="fw-bold text-primary mb-3 ">
                 About The Project
               </h4>
               <p className="text-muted">
@@ -175,7 +175,7 @@ const InceptionFertility = () => {
         <div className="row g-4 align-items-stretch">
           <div className="col-md-6" data-aos="fade-right">
             <div className="card border-0 shadow-lg rounded-4 h-100 p-4 bg-white bg-opacity-75 backdrop-blur">
-              <h4 className="fw-bold text-primary mb-3 display-6">
+              <h4 className="fw-bold text-primary mb-3 ">
                 Challenges
               </h4>
               <ul className="list-unstyled small">
@@ -199,7 +199,7 @@ const InceptionFertility = () => {
           </div>
           <div className="col-md-6" data-aos="fade-left">
             <div className="card border-0 shadow-lg rounded-4 h-100 p-4 bg-white">
-              <h4 className="fw-bold text-primary mb-3display-6 display-6">
+              <h4 className="fw-bold text-primary mb-3 ">
                 Solutions
               </h4>
               <ul className="list-unstyled small">
@@ -232,7 +232,7 @@ const InceptionFertility = () => {
         className="py-5 position-relative"
         style={{ background: "#f4f7ff" }}>
         <div className="container" data-aos="fade-up">
-          <h2 className="fw-bold h1 text-center text-primary mb-5 display-6">
+          <h2 className="fw-bold h1 text-center text-primary mb-5 ">
             Main Features
           </h2>
           <ul className="list-unstyled small">

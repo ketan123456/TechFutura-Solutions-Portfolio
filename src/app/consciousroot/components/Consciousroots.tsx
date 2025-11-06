@@ -56,7 +56,7 @@ const Consciousroots: React.FC = () => {
           }}
         />
         <div className="container position-relative py-5" data-aos="fade-up">
-          <h1 className="display-4 fw-bold mb-3 text-shadow-lg text-white">
+          <h1 className=" fw-bold mb-3 text-shadow-lg text-white">
             Consciousroot
           </h1>
           <p className="lead mb-4 opacity-75 fs-5">
@@ -75,7 +75,7 @@ const Consciousroots: React.FC = () => {
           {/* Overview */}
           <div className="col-md-6" data-aos="fade-right">
             <div className="card border-0 shadow-lg rounded-4 h-100 p-4 bg-white bg-opacity-75 backdrop-blur">
-              <h4 className="fw-bold text-primary mb-3 display-6">
+              <h4 className="fw-bold text-primary mb-3 ">
                 Project Overview
               </h4>
               <ul className="list-unstyled small">
@@ -117,7 +117,7 @@ const Consciousroots: React.FC = () => {
           {/* Client */}
           <div className="col-md-6" data-aos="fade-left">
             <div className="card border-0 shadow-lg rounded-4 h-100 p-4 bg-white">
-              <h4 className="fw-bold text-primary mb-3 display-6">
+              <h4 className="fw-bold text-primary mb-3 ">
                 The Client
               </h4>
               <p className="text-muted">
@@ -134,7 +134,7 @@ const Consciousroots: React.FC = () => {
         <div className="row g-4 align-items-stretch">
           <div className="col-md-6" data-aos="fade-right">
             <div className="card border-0 shadow-lg rounded-4 h-100 p-4 bg-white bg-opacity-75 backdrop-blur">
-              <h4 className="fw-bold text-primary mb-3 display-6">
+              <h4 className="fw-bold text-primary mb-3 ">
                 Technologies Used
               </h4>
               <ul className="list-unstyled small">
@@ -163,7 +163,7 @@ const Consciousroots: React.FC = () => {
           </div>
           <div className="col-md-6" data-aos="fade-left">
             <div className="card border-0 shadow-lg rounded-4 h-100 p-4 bg-white">
-              <h4 className="fw-bold text-primary mb-3 display-6">
+              <h4 className="fw-bold text-primary mb-3 ">
                 About The Project
               </h4>
               <p className="text-muted">
@@ -187,7 +187,7 @@ const Consciousroots: React.FC = () => {
           {/* Challenges */}
           <div className="col-md-6" data-aos="fade-right">
             <div className="card border-0 shadow-lg rounded-4 h-100 p-4 bg-white bg-opacity-75 backdrop-blur">
-              <h4 className="fw-bold text-primary mb-3 display-6">
+              <h4 className="fw-bold text-primary mb-3 ">
                 Challenges
               </h4>
               <ul className="list-unstyled small">
@@ -210,7 +210,7 @@ const Consciousroots: React.FC = () => {
           {/* Solutions */}
           <div className="col-md-6" data-aos="fade-left">
             <div className="card border-0 shadow-lg rounded-4 h-100 p-4 bg-white">
-              <h4 className="fw-bold text-primary mb-3 display-6">Solutions</h4>
+              <h4 className="fw-bold text-primary mb-3 ">Solutions</h4>
               <ul className="list-unstyled small">
                 <li className="mb-2">
                   Conducted user research to understand needs and preferences,

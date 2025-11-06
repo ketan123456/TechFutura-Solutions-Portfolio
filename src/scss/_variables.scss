@@ -23,7 +23,8 @@ $container-max-widths: (
   --bs-offcanvas-width: 25.903vw;
   --spacer: 0.278vw;
   --bs-font: "DM Sans", sans-serif;
-  --bs-font-heading: "Drama";
+  --bs-font-heading: "Prata",
+    serif;
   --bs-font-italic: "DM Sans", sans-serif;
 
   --bs-body-ff: var(--bs-font);
@@ -37,7 +38,7 @@ $container-max-widths: (
   // --bs-font-size-1: 12px;
   // --bs-line-height-1: 100%;
 
-  --bs-font-size-h1: 56px;  
+  --bs-font-size-h1: 56px;
   --bs-line-height-h1: 100%;
   --bs-font-weight-h1: 700;
   --bs-font-size-h2: 48px;
@@ -53,7 +54,7 @@ $container-max-widths: (
   --bs-line-height-h5: 100%;
   --bs-font-weight-h5: 400;
   --bs-font-size-h6: 0.972vw;
-  --bs-line-height-h6: 28px   ;
+  --bs-line-height-h6: 28px;
   --bs-font-weight-h6: 400;
 
   --bs-radius-xl: 2.083vw;
