@@ -86,7 +86,7 @@ const Clymb = () => {
           <div className="col-md-6" data-aos="fade-right">
             <div className="card border-0 shadow-lg rounded-4 h-100 p-4 bg-white bg-opacity-75 backdrop-blur">
               <h4 className="fw-bold text-primary mb-3 display-6">
-                p className="text-muted"
+                {/* p className="text-muted" */}Project Overview
               </h4>
               <ul className="list-unstyled small">
                 <li className="mb-2">
@@ -467,7 +467,7 @@ const Clymb = () => {
       {/* ===== Final Result ===== */}
       <section className="py-5 text-center bg-white" data-aos="zoom-in">
         <div className="container">
-          <h2 className="fw-bold text-success mb-3">The Result </h2>
+          <h2 className="fw-bold text-success mb-3">The Result</h2>
           <p className="text-muted fs-5">
             <span>500K+</span> &nbsp;
             <span>Funding</span>

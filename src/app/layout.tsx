@@ -15,41 +15,41 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://tech-futura-solutions-portfolio.vercel.app"),
+  metadataBase: new URL("https://techfutura.in"),
+
   title: {
     default: "TechFutura Solutions | Web & App Development Company in India",
     template: "%s | TechFutura Solutions",
   },
+
   description:
-    "TechFutura Solutions is an award-winning IT company specializing in web development, mobile app development, and SEO services. Build your digital presence with scalable technology and stunning design.",
+    "TechFutura Solutions is a leading IT company offering web development, mobile app development, and digital solutions for businesses worldwide. Partner with us to grow your business with scalable technology and smart design.",
+
   keywords: [
     "TechFutura Solutions",
     "web development company",
-    "app development company",
-    "IT company India",
-    "Next.js development",
-    "React development",
+    "app development services",
     "mobile app development",
-    "SEO services",
+    "Next.js",
+    "React.js",
     "UI/UX design",
-    "digital marketing",
-    "software development",
-    "custom web solutions",
-    "enterprise web development",
+    "digital transformation",
+    "SEO optimization",
+    "software company India",
   ],
-  authors: [
-    {
-      name: "TechFutura Solutions",
-      url: "https://tech-futura-solutions-portfolio.vercel.app",
-    },
-  ],
+
+  authors: [{ name: "TechFutura Solutions", url: "https://techfutura.in" }],
   creator: "TechFutura Solutions",
   publisher: "TechFutura Solutions",
+
   alternates: {
-    canonical: "https://tech-futura-solutions-portfolio.vercel.app",
+    canonical: "https://techfutura.in",
   },
+
+  // ✅ Open Graph — for Facebook, LinkedIn, WhatsApp, Gmail previews, etc.
   openGraph: {
-    title: "TechFutura Solutions | Innovative Web & App Development Company",
+    title:
+      "TechFutura Solutions | Innovative Web & App Development Company in India",
     description:
       "We create high-performance websites, mobile apps, and digital platforms to accelerate business success. Partner with TechFutura Solutions for innovative IT solutions.",
     url: "https://tech-futura-solutions-portfolio.vercel.app",
@@ -58,45 +58,53 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://tech-futura-solutions-portfolio.vercel.app/og-image.jpg",
+        url: "https://techfutura.in/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "TechFutura Solutions - Web & App Development",
       },
     ],
   },
+
+  // ✅ Twitter (X) Card — for Twitter / X sharing
   twitter: {
     card: "summary_large_image",
     site: "@techfuturasolutions",
     creator: "@techfuturasolutions",
     title: "TechFutura Solutions | Web & App Development Experts",
     description:
-      "Custom web and mobile development solutions that drive business growth and innovation.",
-    images: ["https://tech-futura-solutions-portfolio.vercel.app/favicon.ico"],
+      "Custom web and mobile development solutions that drive business growth and scalability.",
+    site: "@techfuturasolutions", // Replace with your X handle
+    creator: "@techfuturasolutions",
+    images: ["https://techfutura.in/og-image.jpg"],
   },
-  icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon.ico",
-    apple: "/apple-touch-icon.png",
-  },
-  category: "technology",
-  applicationName: "TechFutura Solutions",
-  referrer: "origin-when-cross-origin",
-  generator: "Next.js 15",
+
+  // ✅ Additional SEO Enhancements
   robots: {
     index: true,
     follow: true,
     googleBot: {
       index: true,
       follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
       "max-snippet": -1,
+      "max-image-preview": "large",
+      "max-video-preview": -1,
     },
   },
-  verification: {
-    google: "YOUR_GOOGLE_SITE_VERIFICATION_ID",
+
+  // ✅ Favicons and App icons
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
   },
+
+  // ✅ Optional theme color (for mobile browsers)
+  themeColor: "#0a0a0a",
+
+  // ✅ Optional application info
+  applicationName: "TechFutura Solutions",
+  category: "Technology",
 };
 
 export default function RootLayout({

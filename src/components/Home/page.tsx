@@ -29,12 +29,23 @@ const HomeComponent = () => {
           <h2 className="display-4 text-white fw-bold mb-3 text-shadow-lg">
             TechFutura Solutions
           </h2>
-          <h3 className="fw-bold display-6  text-white mb-3">Our Prtfolio</h3>
+          <h3 className="fw-bold display-6  text-white mb-3">Our Portfolio</h3>
         </div>
       </section>
       <div className="px-3">
         <ul className="vstack gap-3 mt-10  justify-content-center p-4 border rounded-5 shadow-lg card portfolio-card">
           <AnimatedList className="vstack w-100 gap-3 " delay={500}>
+           <li className="text-secondary shadow-sm rounded-pill px-2 py-1 w-100 fw-semibold flex-sm-row flex-column gap-3 justify-content-between m-0 d-flex align-items-center">
+              Mporeo
+              {/* <p>
+                    <Image src="/consciousroot.png" alt="Consciousroot Logo" width={100} height={100} />
+                </p> */}
+              <button
+                className="ms-3 border-0 p-3 rounded-pill btn btn-primary"
+                onClick={() => handleRoutes(ROUTES.MPOREO)}>
+                View Case Study
+              </button>
+            </li>
             <li className="text-secondary shadow-sm rounded-pill px-2 py-1 w-100 fw-semibold flex-sm-row flex-column gap-3 justify-content-between m-0 d-flex align-items-center">
               GOTU
               {/* <p>
