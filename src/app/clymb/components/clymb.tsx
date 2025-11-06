@@ -282,7 +282,7 @@ const Clymb = () => {
         style={{ background: "#f4f7ff" }}>
         <div className="container" data-aos="fade-up">
           <h2 className="fw-bold h1 text-center text-primary mb-5">
-            Main Features 🚀
+            Main Features 
           </h2>
           <ul className="list-unstyled small">
             <li className="mb-2">
