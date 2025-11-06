@@ -53,8 +53,7 @@ const Mporeo = () => {
         <div className="container position-relative py-5" data-aos="fade-up">
           <h1 className=" fw-bold mb-3 text-shadow-lg text-white h2">Mporeo</h1>
           <p className="lead mb-4 opacity-75 fs-5">
-            Empowering digital commerce through innovation, scalability, and
-            seamless user experiences.
+            The revolutionary Food-Tech that is transforming your dining experience. Happy You
           </p>
           <button className="btn btn-light px-4 py-2 rounded-pill shadow-sm fw-semibold">
             Web & Mobile App Development
