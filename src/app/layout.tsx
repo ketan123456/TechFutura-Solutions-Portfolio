@@ -5,74 +5,140 @@ import "./globals.css";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+  display: "swap",
 });
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "TechFutura Solutions | Web & App Development Company in India",
+  metadataBase: new URL("https://tech-futura-solutions-portfolio.vercel.app"),
+  title: {
+    default: "TechFutura Solutions | Web & App Development Company in India",
+    template: "%s | TechFutura Solutions",
+  },
   description:
-    "TechFutura Solutions is a leading IT company offering web development, mobile app development, and digital solutions for businesses worldwide. We help you grow online with scalable technology and smart design.",
+    "TechFutura Solutions is an award-winning IT company specializing in web development, mobile app development, and SEO services. Build your digital presence with scalable technology and stunning design.",
   keywords: [
     "TechFutura Solutions",
     "web development company",
-    "app development services",
+    "app development company",
     "IT company India",
     "Next.js development",
     "React development",
     "mobile app development",
     "SEO services",
     "UI/UX design",
+    "digital marketing",
+    "software development",
+    "custom web solutions",
+    "enterprise web development",
   ],
-  authors: [{ name: "TechFutura Solutions", url: "https://techfutura.in" }],
+  authors: [
+    {
+      name: "TechFutura Solutions",
+      url: "https://tech-futura-solutions-portfolio.vercel.app",
+    },
+  ],
   creator: "TechFutura Solutions",
   publisher: "TechFutura Solutions",
-  metadataBase: new URL("https://techfutura.in"),
+  alternates: {
+    canonical: "https://tech-futura-solutions-portfolio.vercel.app",
+  },
   openGraph: {
     title: "TechFutura Solutions | Innovative Web & App Development Company",
     description:
-      "We design and develop high-performance websites and mobile apps to accelerate your digital success. Partner with TechFutura Solutions for modern IT solutions.",
-    url: "https://techfutura.in",
+      "We create high-performance websites, mobile apps, and digital platforms to accelerate business success. Partner with TechFutura Solutions for innovative IT solutions.",
+    url: "https://tech-futura-solutions-portfolio.vercel.app",
     siteName: "TechFutura Solutions",
+    locale: "en_IN",
+    type: "website",
     images: [
       {
-        url: "https://techfutura.in/og-image.jpg", // Replace with your real image
+        url: "https://tech-futura-solutions-portfolio.vercel.app/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "TechFutura Solutions - Web & App Development",
       },
     ],
-    locale: "en_IN",
-    type: "website",
   },
   twitter: {
     card: "summary_large_image",
+    site: "@techfuturasolutions",
+    creator: "@techfuturasolutions",
     title: "TechFutura Solutions | Web & App Development Experts",
     description:
-      "Custom web and mobile development solutions that drive business growth.",
-    images: ["https://techfutura.in/og-image.jpg"], // Replace with your real image
-    creator: "@techfuturasolutions", // Replace with your Twitter handle
+      "Custom web and mobile development solutions that drive business growth and innovation.",
+    images: ["https://tech-futura-solutions-portfolio.vercel.app/favicon.ico"],
   },
   icons: {
     icon: "/favicon.ico",
     shortcut: "/favicon.ico",
     apple: "/apple-touch-icon.png",
   },
-  alternates: {
-    canonical: "https://techfutura.in",
+  category: "technology",
+  applicationName: "TechFutura Solutions",
+  referrer: "origin-when-cross-origin",
+  generator: "Next.js 15",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  verification: {
+    google: "YOUR_GOOGLE_SITE_VERIFICATION_ID",
   },
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
+      <head>
+        {/* ✅ Schema.org JSON-LD Structured Data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: "TechFutura Solutions",
+              url: "https://tech-futura-solutions-portfolio.vercel.app",
+              logo: "https://tech-futura-solutions-portfolio.vercel.app/favicon.ico",
+              sameAs: [
+                "https://www.facebook.com/techfuturasolutions",
+                "https://twitter.com/techfuturasolutions",
+                "https://www.linkedin.com/company/techfuturasolutions/",
+                "https://www.instagram.com/techfuturasolutions/",
+              ],
+              description:
+                "TechFutura Solutions provides professional web, app, and SEO services for modern businesses worldwide.",
+              address: {
+                "@type": "PostalAddress",
+                addressLocality: "Delhi NCR",
+                addressCountry: "India",
+              },
+              contactPoint: {
+                "@type": "ContactPoint",
+                telephone: "+91-8882138411",
+                contactType: "Customer Service",
+                areaServed: "IN",
+                availableLanguage: "English",
+              },
+            }),
+          }}
+        />
+      </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         {children}
       </body>

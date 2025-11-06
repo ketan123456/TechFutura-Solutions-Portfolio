@@ -368,7 +368,7 @@ const Clymb = () => {
         </div> */}
         <div className="container" data-aos="fade-up">
           <h2 className="fw-bold text-center text-primary mb-5">
-            Project Highlights ✨
+            Project Highlights 
           </h2>
           <div className="row g-4">
             {[
@@ -406,7 +406,7 @@ const Clymb = () => {
       <section className="bg-light py-5">
         <div className="container" data-aos="fade-up">
           <h2 className="fw-bold text-center text-primary mb-5">
-            Product Visuals 🖼️
+            Product Visuals
           </h2>
           <div className="row g-4">
             {images.map((img, i) => (
@@ -467,7 +467,7 @@ const Clymb = () => {
       {/* ===== Final Result ===== */}
       <section className="py-5 text-center bg-white" data-aos="zoom-in">
         <div className="container">
-          <h2 className="fw-bold text-success mb-3">The Result 🌟</h2>
+          <h2 className="fw-bold text-success mb-3">The Result </h2>
           <p className="text-muted fs-5">
             <span>500K+</span> &nbsp;
             <span>Funding</span>

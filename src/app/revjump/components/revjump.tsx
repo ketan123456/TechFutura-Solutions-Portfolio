@@ -305,7 +305,7 @@ const Revjump = () => {
             </p>
           </div> */}
           <h2 className="fw-bold text-center text-primary mb-5">
-            Project Highlights ✨
+            Project Highlights 
           </h2>
           <div className="row g-4">
             {[
@@ -342,7 +342,7 @@ const Revjump = () => {
       {/* ===== Final Result ===== */}
       <section className="py-5 text-center bg-white" data-aos="zoom-in">
         <div className="container">
-          <h2 className="fw-bold text-success mb-3">The Result 🌟</h2>
+          <h2 className="fw-bold text-success mb-3">The Result </h2>
           <p className=" fs-5">
             <span className="fw-bold fs-4 text-dark">95%</span> User
             Satisfaction Rate <br />
