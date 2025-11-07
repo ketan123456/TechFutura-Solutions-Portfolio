@@ -23,13 +23,13 @@ const HomeComponent = () => {
           }}
         />
         <div className="container position-relative py-5">
-          <h1 className="h2 mb-2 text-center fw-bold  text-white">
-            Welcome to TechFutura!
+          <h1 className="h5 mb-2 text-center fw-bold mb-6  text-white">
+            Welcome to TechFutura Solutions
           </h1>
-          <h2 className=" h3 mb-2 text-white fw-bold mb-3 text-shadow-lg">
+          {/* <h2 className="h6 mb-2 text-white fw-bold mb-3 text-shadow-lg">
             TechFutura Solutions
-          </h2>
-          <h3 className="h4 fw-bold  text-white mb-3">Our Portfolio</h3>
+          </h2> */}
+          <h3 className="h5 fw-bold  text-white mb-3">Our Portfolio</h3>
         </div>
       </section>
       <div className="px-3">
