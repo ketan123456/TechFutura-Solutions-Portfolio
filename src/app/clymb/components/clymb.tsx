@@ -1,4 +1,4 @@
-"use client";
+"use client"; // ✅ Keep this at top to safely use AOS (client-side only) — ensures nothing breaks
 
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
@@ -9,10 +9,11 @@ import "bootstrap/dist/css/bootstrap.min.css";
 const Clymb: React.FC = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
-  // ✅ AOS Initialization for Next.js
+  // ✅ AOS Initialization (Safe for Next.js SSR)
   useEffect(() => {
     if (typeof window !== "undefined") {
-      const init = () => {
+      import("aos").then((AOSModule) => {
+        const AOS = AOSModule.default;
         AOS.init({
           duration: 900,
           once: true,
@@ -20,14 +21,10 @@ const Clymb: React.FC = () => {
           offset: 80,
           delay: 100,
         });
-      };
-      init();
-
-      const timer = requestAnimationFrame(() => {
-        AOS.refreshHard();
+        setTimeout(() => {
+          AOS.refresh();
+        }, 500);
       });
-
-      return () => cancelAnimationFrame(timer);
     }
   }, []);
 
@@ -151,25 +148,20 @@ const Clymb: React.FC = () => {
               <div className="card border-0 shadow-lg rounded-4 h-100 p-4 bg-white bg-opacity-75 backdrop-blur">
                 <h4 className="fw-bold text-primary mb-3">Technologies Used</h4>
                 <ul className="list-unstyled small">
-                  <li className="mb-2">
-                    <span>Web Framework: </span>
-                    <span>Java Spring Boot</span>
+                  <li>
+                    <span>Web Framework:</span> Java Spring Boot
                   </li>
-                  <li className="mb-2">
-                    <span>Frontend: </span>
-                    <span>Angular</span>
+                  <li>
+                    <span>Frontend:</span> Angular
                   </li>
-                  <li className="mb-2">
-                    <span>Backend: </span>
-                    <span>Java Spring Boot</span>
+                  <li>
+                    <span>Backend:</span> Java Spring Boot
                   </li>
-                  <li className="mb-2">
-                    <span>Database: </span>
-                    <span>MS SQL</span>
+                  <li>
+                    <span>Database:</span> MS SQL
                   </li>
-                  <li className="mb-2">
-                    <span>Third Party Integration: </span>
-                    <span>Clever, Twilio, Stripe</span>
+                  <li>
+                    <span>Third Party Integration:</span> Clever, Twilio, Stripe
                   </li>
                 </ul>
               </div>
@@ -196,19 +188,19 @@ const Clymb: React.FC = () => {
               <div className="card border-0 shadow-lg rounded-4 h-100 p-4 bg-white bg-opacity-75 backdrop-blur">
                 <h4 className="fw-bold text-primary mb-3">Challenges</h4>
                 <ul className="list-unstyled small">
-                  <li className="mb-2">
+                  <li>
                     Complex integration with Clever for data synchronization.
                   </li>
-                  <li className="mb-2">
+                  <li>
                     Maintaining compliance with recognized assessment standards.
                   </li>
-                  <li className="mb-2">
+                  <li>
                     Creating adaptive learning algorithms for personalization.
                   </li>
-                  <li className="mb-2">
+                  <li>
                     Ensuring accessibility and responsiveness across devices.
                   </li>
-                  <li className="mb-2">
+                  <li>
                     Developing corporate well-being modules alongside education
                     tools.
                   </li>
@@ -220,18 +212,18 @@ const Clymb: React.FC = () => {
               <div className="card border-0 shadow-lg rounded-4 h-100 p-4 bg-white">
                 <h4 className="fw-bold text-primary mb-3">Solutions</h4>
                 <ul className="list-unstyled small">
-                  <li className="mb-2">
+                  <li>
                     Refactored the platform architecture for scalability and
                     data flow optimization.
                   </li>
-                  <li className="mb-2">
+                  <li>
                     Designed engaging visuals and adaptive UI for multiple grade
                     levels.
                   </li>
-                  <li className="mb-2">
+                  <li>
                     Created structured synchronization routines for Clever.
                   </li>
-                  <li className="mb-2">
+                  <li>
                     Implemented strict data security protocols for all modules.
                   </li>
                 </ul>
@@ -241,105 +233,7 @@ const Clymb: React.FC = () => {
         </div>
       </section>
 
-      {/*==== Main Features ========= */}
-      <section
-        className="py-5 position-relative"
-        style={{ background: "#f4f7ff" }}>
-        <div className="container" data-aos="fade-up">
-          <h2 className="fw-bold h1 text-center text-primary mb-5">
-            Main Features
-          </h2>
-          <div className="row g-4 align-items-stretch">
-            {[
-              {
-                title: "Compass Dashboard",
-                desc: "Students express their emotional state and receive tailored content.",
-              },
-              {
-                title: "Wall Of Wonder",
-                desc: "Interactive feed for sharing achievements, thoughts, and media.",
-              },
-              {
-                title: "Resource Library",
-                desc: "A digital hub of videos and articles promoting well-being.",
-              },
-              {
-                title: "Journal",
-                desc: "A reflective diary for students to track emotions and growth.",
-              },
-              {
-                title: "Badges & Streaks",
-                desc: "Motivational gamified elements that reward participation.",
-              },
-              {
-                title: "Feedback Survey",
-                desc: "Collects feedback and user insights to improve experiences.",
-              },
-              {
-                title: "SEL Assessment",
-                desc: "Evaluates socio-emotional learning through monthly surveys.",
-              },
-              {
-                title: "Youth’s Journey",
-                desc: "Tracks learning activities and milestones.",
-              },
-              {
-                title: "AI-Based Recommendation",
-                desc: "Smart suggestions powered by user interaction data.",
-              },
-            ].map((feature, i) => (
-              <div className="col-md-6 col-lg-4" key={i}>
-                <div className="card border-0 shadow-lg rounded-4 h-100 p-4 bg-white">
-                  <h4 className="fw-bold text-primary mb-3">{feature.title}</h4>
-                  <p className="small mb-0 text-muted">{feature.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ===== Highlights ===== */}
-      <section
-        className="py-3 position-relative"
-        style={{ background: "#f4f7ff" }}>
-        <div className="container" data-aos="fade-up">
-          <h2 className="fw-bold text-center text-primary mb-5">
-            Project Highlights
-          </h2>
-          <div className="row g-4">
-            {[
-              "Clever Integration for School Onboarding",
-              "AI-driven Personalized Learning",
-              "Corporate Wellness Modules",
-              "CASEL-aligned Emotional Learning Framework",
-            ].map((item, i) => (
-              <div className="col-md-6 col-lg-4" key={i}>
-                <div
-                  className="card border-0 h-100 shadow-lg rounded-4 text-center p-4"
-                  style={{
-                    transition: "transform 0.35s ease, box-shadow 0.35s ease",
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.transform = "translateY(-8px)";
-                    e.currentTarget.style.boxShadow =
-                      "0 10px 25px rgba(0,0,0,0.15)";
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.transform = "translateY(0)";
-                    e.currentTarget.style.boxShadow =
-                      "0 6px 15px rgba(0,0,0,0.1)";
-                  }}>
-                  <i className="bi bi-lightning-charge-fill text-warning fs-1 mb-3"></i>
-                  <p className="fw-semibold">{item}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ===== Product Visuals with Modal ===== */}
+      {/* ===== Product Visuals ===== */}
       <section className="bg-light py-5">
         <div className="container" data-aos="fade-up">
           <h2 className="fw-bold text-center text-primary mb-5">
@@ -351,31 +245,20 @@ const Clymb: React.FC = () => {
                 <div
                   className="card border-0 rounded-4 shadow overflow-hidden position-relative"
                   style={{ cursor: "pointer" }}>
-                  <div className="image-wrapper position-relative">
-                    <Image
-                      src={`/images/Clymb/${img}`}
-                      alt="Clymb Visual"
-                      width={500}
-                      height={300}
-                      className="img-fluid w-100"
-                      style={{ transition: "transform 0.5s ease" }}
-                    />
-                    <div className="overlay d-flex justify-content-center align-items-center">
-                      <button
-                        className="btn btn-light rounded-pill px-4 py-2 shadow"
-                        onClick={() =>
-                          setSelectedImage(`/images/Clymb/${img}`)
-                        }>
-                        View
-                      </button>
-                    </div>
-                  </div>
+                  <Image
+                    src={`/images/Clymb/${img}`}
+                    alt="Clymb Visual"
+                    width={500}
+                    height={300}
+                    className="img-fluid w-100"
+                    onClick={() => setSelectedImage(`/images/Clymb/${img}`)}
+                    style={{ transition: "transform 0.5s ease" }}
+                  />
                 </div>
               </div>
             ))}
           </div>
 
-          {/* Fullscreen Modal */}
           {selectedImage && (
             <div
               className="fullscreen-modal d-flex justify-content-center align-items-center"
@@ -385,7 +268,6 @@ const Clymb: React.FC = () => {
                 onClick={(e) => e.stopPropagation()}>
                 <button
                   className="btn btn-light rounded-circle position-absolute top-0 end-0 m-3 shadow"
-                  style={{ zIndex: 10 }}
                   onClick={() => setSelectedImage(null)}>
                   ✕
                 </button>
