@@ -141,7 +141,7 @@ const Revjump: React.FC = () => {
                   </li>
                   <li className="mb-2">
                     <span>Database: </span>
-                    <span>MSSQL</span>
+                    <span>MS SQL</span>
                   </li>
                   <li className="mb-2">
                     <span>Third Party Integration: </span>

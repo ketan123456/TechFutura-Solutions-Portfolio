@@ -138,7 +138,7 @@ const InceptionFertility: React.FC = () => {
                 <ul className="list-unstyled small">
                   <li className="mb-2">
                     <span>UI Framework: </span>
-                    <span>Nuxt.js</span>
+                    <span>Nuxt.js, Vue.js</span>
                   </li>
                   <li className="mb-2">
                     <span>Frontend: </span>

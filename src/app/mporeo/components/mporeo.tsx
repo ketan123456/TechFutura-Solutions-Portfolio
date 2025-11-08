@@ -137,7 +137,7 @@ const Mporeo = () => {
                   </li>
                   <li className="mb-2">
                     <span>Database: </span>
-                    <span>MSSQL</span>
+                    <span>MS SQL</span>
                   </li>
                   <li className="mb-2">
                     <span>Mobile Applications: </span>
