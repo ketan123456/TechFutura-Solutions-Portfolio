@@ -24,7 +24,7 @@ export default function Header() {
     <header className="header px-3">
       <div className="header-wrapper d-flex justify-content-between gap-4 align-items-center">
         <Link href="/" className="logo">
-          <Image src="Logo.svg" alt="Logo" width={150} height={50} />
+          <Image src="/logo.svg" alt="Logo" width={150} height={50} />
         </Link>
         <nav className="nav">
           {menuLinks.map((link, i) => (
