@@ -5,6 +5,7 @@ import React, { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { div } from "motion/react-client";
 
 const Gotu: React.FC = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);

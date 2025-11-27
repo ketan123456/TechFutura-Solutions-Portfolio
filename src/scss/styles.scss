@@ -1,7 +1,8 @@
 @import "mixins";
+@import "bootstrap/bootstrap";
 @import "variables";
 
-@import "bootstrap/bootstrap";
+
 
 @import "component/base";
 @import "component/root";
@@ -62,4 +63,68 @@
         position: fixed;
         top: 0;
         z-index: 999;
+}
+
+
+
+
+.header {
+    padding: 20px 0;
+    background: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav {
+    display: flex;
+    gap: 30px;
+
+    a {
+        color: #0f2d53;
+        font-weight: 500;
+        transition: 0.3s;
+        position: relative;
+        text-decoration: none !important;
+        &::after{
+            content: '';
+            display: block;
+            width: 100%;
+            background: #063fdd;
+            position: absolute;
+            height: 2px;
+            transform: scaleX(0);
+           
+        }
+
+        &:hover, &.active {
+            color: #063fdd;
+            &::after {
+                    transform: scaleX(1);
+                }
+        }
+    }
+}
+
+.ctaBtn {
+    padding: 10px 22px;
+    background: #063fdd;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+@media(max-width: 768px) {
+    .nav {
+        display: none;
+    }
 }

@@ -377,7 +377,7 @@ const InceptionFertility: React.FC = () => {
       </section>
 
       {/* ===== Custom Styles ===== */}
-      <style jsx>{`
+      {/* <style jsx>{`
         .image-wrapper {
           overflow: hidden;
         }
@@ -409,7 +409,7 @@ const InceptionFertility: React.FC = () => {
             opacity: 1;
           }
         }
-      `}</style>
+      `}</style> */}
     </div>
   );
 };

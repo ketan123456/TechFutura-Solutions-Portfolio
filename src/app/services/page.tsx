@@ -4,7 +4,7 @@ import Header from '../header/page'
 const Services = () => {
   return (
     <div>
-        <Header/>
+     
         <ServicesComponent/>
     </div>
   )

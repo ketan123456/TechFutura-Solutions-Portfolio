@@ -3,10 +3,13 @@ import HomePage from "../app/home/page";
 
 export default function Home() {
   return (
-    <div className="">
-      <main className="">
-        <HomePage />
-      </main>
-    </div>
+    <>
+      
+      <div className="">
+        <main className="">
+          <HomePage />
+        </main>
+      </div>
+    </>
   );
 }
