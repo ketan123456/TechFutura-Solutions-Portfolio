@@ -70,7 +70,7 @@ const Clymb: React.FC = () => {
           }}
         />
         <div className="container position-relative py-5" data-aos="fade-up">
-          <h1 className="fw-bold mb-3 text-shadow-lg text-white h2">Clymb</h1>
+          <h1 className="fw-bold mb-3 text-shadow-lg text-white h2">EdTech platform</h1>
           <p className="lead mb-4 opacity-75 fs-5">
             An innovative EdTech platform fostering socio-emotional growth in
             K-12 students through personalized learning and well-being
@@ -108,11 +108,11 @@ const Clymb: React.FC = () => {
                       {[
                         "Youth",
                         "Parent",
-                        "Clymb Champions",
+                        "Teachers",
                         "Corporate",
                         "Organization",
                         "Large Organization",
-                        "Clymb Admin",
+                        "Admin",
                       ].map((role, i) => (
                         <span
                           key={i}
@@ -135,7 +135,7 @@ const Clymb: React.FC = () => {
               <div className="card border-0 shadow-lg rounded-4 h-100 p-4 bg-white">
                 <h4 className="fw-bold text-primary mb-3">The Client</h4>
                 <p className="text-muted">
-                  Clymb originated from a concern about the increasing stress
+                  EdTech platform originated from a concern about the increasing stress
                   among youth. It aims to build resilience, empathy, and
                   responsible decision-making in K-12 students through engaging
                   digital experiences. The platform reflects a deep commitment
@@ -179,7 +179,7 @@ const Clymb: React.FC = () => {
               <div className="card border-0 shadow-lg rounded-4 h-100 p-4 bg-white">
                 <h4 className="fw-bold text-primary mb-3">About The Project</h4>
                 <p className="text-muted">
-                  Clymb is an EdTech solution that provides personalized
+                  EdTech platform is an EdTech solution that provides personalized
                   learning paths based on CASEL's socio-emotional competencies.
                   The platform integrates Clever for onboarding, offers mental
                   wellness resources, and includes corporate well-being modules.
@@ -354,7 +354,7 @@ const Clymb: React.FC = () => {
                   <div className="image-wrapper position-relative">
                     <Image
                       src={`/images/Clymb/${img}`}
-                      alt="Clymb Visual"
+                      alt="Visual"
                       width={500}
                       height={300}
                       className="img-fluid w-100"
@@ -376,7 +376,7 @@ const Clymb: React.FC = () => {
           </div>
 
           {/* Fullscreen Modal */}
-          {selectedImage && (
+          {/* {selectedImage && (
             <div
               className="fullscreen-modal d-flex justify-content-center align-items-center"
               onClick={() => setSelectedImage(null)}>
@@ -398,7 +398,7 @@ const Clymb: React.FC = () => {
                 />
               </div>
             </div>
-          )}
+          )} */}
         </div>
       </section>
 
