@@ -340,7 +340,7 @@ const Clymb: React.FC = () => {
       </section>
 
       {/* ===== Product Visuals with Modal ===== */}
-      <section className="bg-light py-5">
+      {/* <section className="bg-light py-5">
         <div className="container" data-aos="fade-up">
           <h2 className="fw-bold text-center text-primary mb-5">
             Product Visuals
@@ -374,9 +374,7 @@ const Clymb: React.FC = () => {
               </div>
             ))}
           </div>
-
-          {/* Fullscreen Modal */}
-          {/* {selectedImage && (
+          {selectedImage && (
             <div
               className="fullscreen-modal d-flex justify-content-center align-items-center"
               onClick={() => setSelectedImage(null)}>
@@ -398,9 +396,9 @@ const Clymb: React.FC = () => {
                 />
               </div>
             </div>
-          )} */}
+          )}
         </div>
-      </section>
+      </section> */}
 
       {/* ===== Final Result ===== */}
       <section className="py-5 text-center bg-white" data-aos="zoom-in">
