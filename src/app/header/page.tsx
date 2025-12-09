@@ -3,7 +3,7 @@ import HeaderComponent from '@/components/Header/page'
 const Header = () => {
   return (
     <div>
-        <HeaderComponent/>
+        {/* <HeaderComponent/> */}
     </div>
   )
 }
